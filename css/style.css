@@ -114,7 +114,7 @@ img{
 .sobre-mim .texto{
     margin-bottom: 20px;
     color: #0A122A;
-    text-align: start;
+    text-align: justify;
 }
 
 .links{
@@ -171,7 +171,7 @@ img{
     border-radius: 50%;
 }
 
-/* Experiências */
+/* Conhecimentos */
 
 .conhecimentos{
     max-width: 1200px;
@@ -281,6 +281,63 @@ h3{
     border-radius: 10px;
 }
 
+/* Contato */
+
+.contato{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0px;
+    border-top: 2px solid #0A122A;
+}
+
+.contato .contato-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contato .contato-container .contato-box-container{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.contato .contato-container .img-contato{
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.contato .contato-container .contato-box-container .contato-box{
+    display: flex;
+    margin: 0px 0px 20px 0px;
+}
+
+.contato .contato-container .contato-box-container .contato-box span{
+    width: 60px;
+    height: 60px;
+    background-color: #0A122A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0px 30px 20px 0;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.contato .contato-container .contato-box-container .contato-box span i{
+    font-size: 30px;
+    color: white;
+}
+
+.contato .contato-container .contato-box-container .contato-box div > p:first-child{
+    color: #0A122A;
+    font-weight: bold;
+    font-size: 1.20em;
+    margin-bottom: 5px;
+}
+
 /* Footer */
 
 .footer-bg{
@@ -340,13 +397,39 @@ h3{
 }
 
 /* Ajustes */
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+
+@media (max-width: 320.98px) {
     .menu-nav .menu{
         display: none;
     }
     .sobre-mim .texto{
+        text-align: justify;
+    }
+    .sobre-mim .eu{
         text-align: center;
+    }
+    .sobre-mim h2{
+        text-align: center;
+    }
+    .links{
+        margin: 0 auto;
+    }
+    .conhecimentos .itens .img-exp{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .contato .contato-container .img-contato{
+        max-width: 300px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 321px) and (max-width: 575.98px) { 
+    .menu-nav .menu{
+        display: none;
+    }
+    .sobre-mim .texto{
+        text-align: justify;
     }
     .sobre-mim .eu{
         text-align: center;
@@ -360,6 +443,9 @@ h3{
     .conhecimentos .itens .img-exp{
         max-width: 350px;
         margin: 0 auto;
+    }
+    .contato .contato-container .img-contato{
+        max-width: 350px;
     }
  }
 
@@ -384,6 +470,9 @@ h3{
         max-width: 400px;
         margin: 0 auto;
     }
+    .contato .contato-container .img-contato{
+        max-width: 520px;
+    }
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -404,6 +493,9 @@ h3{
         max-width: 500px;
         margin: 0 auto;
     }
+    .contato .contato-container .img-contato{
+        max-width: 440px;
+    }
  }
 
 /* Large devices (desktops, 992px and up) */
@@ -411,6 +503,9 @@ h3{
     .conhecimentos .itens .img-exp{
         max-width: 500px;
         margin: 0 auto;
+    }
+    .contato .contato-container .img-contato{
+        max-width: 500px;
     }
  }
 
