@@ -13,16 +13,16 @@
     <body>
         <header class="menu-bg">
             <div class="menu-container">
-                <a class="menu-logo" href="#"><img src="img/logo.png" alt="Logo" width="100"></a>
+                <a class="menu-logo" id="inicio" href="#"><img src="img/logo.png" alt="Logo" width="100"></a>
                 
                 <nav class="menu-nav">
                     <a href="#" class="btnMenu btnMenu_open"><i class="fas fa-bars"></i></a>
                     <ul id="menu" class="menu">
                         <a href="#" class="btnMenu btnMenu_close"><i class="fas fa-bars"></i></a>
                         <li><a href="#sobre">Início</a></li>
-                        <li><a href="#conhecimentos">Conhecimentos</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#conhecimentos" id="linkConhecimentos">Conhecimentos</a></li>
+                        <li><a href="#projetos" id="linkProjetos">Projetos</a></li>
+                        <li><a href="#contato" id="linkContato">Contato</a></li>
                     </ul>
                 </nav>
             </div>  
@@ -32,9 +32,8 @@
             <div class="sobre-mim">
                 <h2>Gabriel Mendes</h2>
                 <p class="eu">Estudante de Ciência da Computação</p>
-                <p class="texto">Meu nome é Gabriel, tenho 19 anos.<br>Graças aos meus esforços como estudante, venho aprendendo muito sobre as respectivas
-                tecnologias utilizadas no Front-End e também no Back-End de aplicações Web.<br> Estou sempre em busca de desafios que
-                agregam meu conhecimento.</p>
+                <p class="texto">Meu nome é Gabriel, tenho 19 anos e graças aos meus esforços como estudante, venho aprendendo muito sobre as respectivas
+                tecnologias utilizadas no Front-End e também no Back-End de aplicações Web.</p>
 
                 <div class="links">
                     <a href="https://github.com/gabrielsmm" target="_blank"><i class="fab fa-github"></i></a>
@@ -153,6 +152,27 @@
                 <img class="img-contato" src="img/contato.png">
 
             </div>
+
+            <h3>Deixe uma mensagem</h3>
+
+            <div class="mensagem-container">
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="ad66dd91-d663-4a9e-aaa4-8a6f7d1dad9e">
+                
+                    <label for="inputNome">Digite seu nome:</label>
+                    <input name="name" type="text" required maxlength="25" minlength="2">
+                
+                    <label for="inputEmail">Digite seu E-mail:</label>
+                    <input name="email" type="email" required maxlength="50">
+                
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="message" type="text" required maxlength="100"></textarea>
+                
+                    <input type="hidden" name="redirectTo" value="http://portfoliogm.epizy.com">
+                
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </div>
         </section>
 
         <footer class="footer-bg">
@@ -166,9 +186,13 @@
                 </div>
 
                 <p>Desenvolvido por <a style="color: white;" href="https://github.com/gabrielsmm" target="_blank">Gabriel Mendes</a></p>
+
+                <a href="#inicio" id="linkInicio"><i class="fas fa-arrow-circle-up"></i></a>
             </div>
+
         </footer>
 
+        <script src="js/scroll.js"></script>
         <script src="js/btnMenu.js"></script>
     </body>
 </html>
