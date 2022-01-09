@@ -9,6 +9,20 @@ body{
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #0A122A;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
 ul{
     list-style: none;
 }
@@ -107,12 +121,13 @@ img{
 }
 
 .sobre-mim .eu{
+    font-size: 1.15em;
     margin-bottom: 20px;
     color: #585858;
 }
 
 .sobre-mim .texto{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #0A122A;
     text-align: justify;
 }
@@ -246,6 +261,14 @@ h3{
     color: #0040FF;
 }
 
+.conhecimentos .itens .tecnologias .tecnologia i.java{
+    color: #FFFFFF;
+}
+
+.conhecimentos .itens .tecnologias .tecnologia i.angular{
+    color: #B22222;
+}
+
 /* Projetos */
 .projetos{
     max-width: 1200px;
@@ -264,6 +287,20 @@ h3{
     display: flex;
     align-items: center;
     overflow-x: scroll;
+}
+
+.projetos-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+  
+.projetos-container::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+  
+.projetos-container::-webkit-scrollbar-thumb {
+    background-color: #0A122A;
+    border-radius: 20px;
 }
 
 .projetos .projetos-container .projeto{
