@@ -43,11 +43,14 @@ img{
 /* Menu */
 .menu-bg{
     background-color: #0A122A;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 .menu-container{
     max-width: 1200px;
-    min-height: 100px;
+    min-height: 80px;
     margin: 0 auto;
     padding: 5px 0px;
     display: flex;
@@ -57,14 +60,7 @@ img{
 }
 
 .menu-logo{
-    font-size: 2.2em;
-    font-weight: bold;
-    color: white;
     margin: 0 10px;
-}
-
-.menu-logo span{
-    color: purple;
 }
 
 .menu-nav ul{
@@ -73,7 +69,7 @@ img{
 }
 
 .menu-nav a{
-    font-size: 1.40em;
+    font-size: 1.35em;
     display: block; /* para influenciar no padding */
     padding: 10px;
     color: white;
@@ -100,7 +96,7 @@ img{
 .sobre{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 0px 40px 0px;
+    padding: 100px 0px 40px 0px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -493,13 +489,13 @@ h3{
     transition: 0.5s;
 }
 
-#linkInicio{
+#linkArrow{
     position: absolute;
     right: 15px;
     padding: 5px;
 }
 
-#linkInicio i{
+#linkArrow i{
     font-size: 45px;
     color: white;
 }

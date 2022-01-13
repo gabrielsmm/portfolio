@@ -23,5 +23,11 @@ document.querySelector("#linkContato").addEventListener("click", function (event
 document.querySelector("#linkInicio").addEventListener("click", function (event) {
     event.preventDefault()
 
-    scrollTo("#inicio")
+    scrollTo("#sobre")
+})
+
+document.querySelector("#linkArrow").addEventListener("click", function (event) {
+    event.preventDefault()
+
+    scrollTo("#sobre")
 })
