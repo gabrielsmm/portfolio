@@ -98,6 +98,7 @@ img{
     margin: 0 auto;
     padding: 100px 0px 40px 0px;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -126,6 +127,9 @@ img{
     margin-bottom: 15px;
     color: #0A122A;
     text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 .links{
@@ -200,6 +204,7 @@ h3{
 
 .conhecimentos .itens{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -265,6 +270,10 @@ h3{
     color: #B22222;
 }
 
+.conhecimentos .itens .tecnologias .tecnologia i.react{
+    color: #5ed3f3;
+}
+
 /* Projetos */
 .projetos{
     max-width: 1200px;
@@ -325,6 +334,7 @@ h3{
 
 .contato .contato-container{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -337,7 +347,7 @@ h3{
 }
 
 .contato .contato-container .img-contato{
-    max-width: 580px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -519,11 +529,13 @@ h3{
         margin: 0 auto;
     }
     .conhecimentos .itens .img-exp{
-        max-width: 300px;
-        margin: 0 auto;
+        display: none;
     }
     .contato .contato-container .img-contato{
-        max-width: 300px;
+        display: none;
+    }
+    .sobre .sobre-img {
+        display: none;
     }
 }
 
@@ -545,14 +557,16 @@ h3{
         margin: 0 auto;
     }
     .conhecimentos .itens .img-exp{
-        max-width: 350px;
-        margin: 0 auto;
+        display: none;
     }
     .contato .contato-container .img-contato{
-        max-width: 350px;
+        display: none;
     }
     .contato .mensagem-container{
         margin: 0px 10px;
+    }
+    .sobre .sobre-img {
+        display: none;
     }
  }
 
@@ -574,14 +588,16 @@ h3{
         margin: 0 auto;
     }
     .conhecimentos .itens .img-exp{
-        max-width: 400px;
-        margin: 0 auto;
+        display: none;
     }
     .contato .contato-container .img-contato{
-        max-width: 520px;
+        display: none;
     }
     .contato .mensagem-container{
         margin: 0px 10px;
+    }
+    .sobre .sobre-img {
+        display: none;
     }
  }
 
@@ -600,22 +616,24 @@ h3{
         margin: 0 auto;
     }
     .conhecimentos .itens .img-exp{
-        max-width: 500px;
-        margin: 0 auto;
+        display: none;
     }
     .contato .contato-container .img-contato{
-        max-width: 440px;
+        max-width: 300px;
+    }
+    .sobre .sobre-img {
+        max-width: 270px;
     }
  }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .conhecimentos .itens .img-exp{
-        max-width: 500px;
+        max-width: 390px;
         margin: 0 auto;
     }
     .contato .contato-container .img-contato{
-        max-width: 500px;
+        max-width: 390px;
     }
  }
 

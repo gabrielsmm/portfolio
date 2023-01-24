@@ -31,7 +31,10 @@
         <section class="sobre" id="sobre">
             <div class="sobre-mim">
                 <h2>Gabriel Mendes</h2>
-                <p class="eu">Desenvolvedor Full Stack Angular | Java em aprendizado constante</p>
+                <div id="typed-strings">
+                    <p>Desenvolvedor Full Stack Angular | Java em aprendizado constante</p>
+                </div>
+                <p id="typed" class="eu"></p>
                 <p class="texto">Estou sempre procurando novos desafios profissionais, desenvolvimento de minhas 
                     habilidades e a geração de resultados positivos como desenvolvedor.</p>
 
@@ -43,7 +46,7 @@
             </div>
 
             <div class="sobre-img">
-                <img src="img/perfil.jpeg" alt="Imagem de um rosto">
+                <img src="img/perfil.jpg" alt="Imagem de perfil">
             </div>
         </section>
 
@@ -51,7 +54,7 @@
             <h3>Conhecimentos</h3>
 
             <div class="itens">
-                <img class="img-exp" src="img/experiencias.png" alt="Ilustração">
+                <img class="img-exp" src="img/developer-animation.svg" alt="Ilustração">
 
                 <div class="tecnologias">
                     
@@ -95,6 +98,11 @@
                     <div class="tecnologia">
                         <i class="fab fa-angular angular"></i>
                         <p>Angular</p>
+                    </div>
+
+                    <div class="tecnologia">
+                        <i class="fab fa-react react"></i>
+                        <p>React</p>
                     </div>
 
                     <div class="tecnologia">
@@ -174,7 +182,7 @@
                         </div>
                     </div>
                     <div class="contato-box">
-                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <a href="mailto:gabrielsmm251@gmail.com" target="_blank"><span><i class="fa fa-envelope" aria-hidden="true"></i></span></a>
                         <div>
                             <p>E-mail:</p>
                             <p>gabrielsmm251@gmail.com</p>
@@ -190,7 +198,7 @@
 
                 </div>
 
-                <img class="img-contato" src="img/contato.png">
+                <img class="img-contato" src="img/contact-animation.svg">
 
             </div>
 
@@ -228,11 +236,15 @@
 
                 <p>Desenvolvido por <a style="color: white;" href="https://github.com/gabrielsmm" target="_blank">Gabriel Mendes</a></p>
 
+                <p style="font-size: 12px; margin-top: 10px;">Ilustrações por <a style="color: white;" href="https://storyset.com/work" target="_blank">Storyset</a></p>
+
                 <a href="#inicio" id="linkArrow"><i class="fas fa-arrow-circle-up"></i></a>
             </div>
 
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
         <script src="js/scroll.js"></script>
         <script src="js/btnMenu.js"></script>
     </body>
