@@ -41,11 +41,9 @@ var typed = new Typed('#typed', {
 const sr = ScrollReveal({
     origin: 'top',
     distance: '20px',
-    duration: 1500,
-    reset: true
+    duration: 1500
 });
 
 sr.reveal('.tecnologia', { delay: 150 });
-sr.reveal('.projeto', { delay: 150 });
 sr.reveal('.contato-box', { delay: 150 });
 sr.reveal('.mensagem-container', { delay: 150 });
