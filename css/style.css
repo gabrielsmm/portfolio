@@ -290,27 +290,14 @@ h3{
 .projetos .projetos-container{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    overflow-x: scroll;
-}
-
-.projetos-container::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-  
-.projetos-container::-webkit-scrollbar-track {
-    background: #FFFFFF;
-}
-  
-.projetos-container::-webkit-scrollbar-thumb {
-    background-color: #0A122A;
-    border-radius: 20px;
 }
 
 .projetos .projetos-container .projeto{
-    flex: 1 0 400px;
-    margin: 0 10px 10px 10px;
+    width: 23em;
+    margin: 15px;
     height: 100%;
 }
 
@@ -321,6 +308,12 @@ h3{
 
 .projetos .projetos-container .projeto img{
     border-radius: 10px;
+    transition: 0.5s;
+}
+
+.projetos .projetos-container .projeto img:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 /* Contato */

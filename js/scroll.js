@@ -45,5 +45,6 @@ const sr = ScrollReveal({
 });
 
 sr.reveal('.tecnologia', { delay: 150 });
+sr.reveal('.projeto', { delay: 150 });
 sr.reveal('.contato-box', { delay: 150 });
 sr.reveal('.mensagem-container', { delay: 150 });
