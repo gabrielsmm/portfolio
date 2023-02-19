@@ -14,16 +14,17 @@
     <body>
         <header class="menu-bg">
             <div class="menu-container">
-                <a class="menu-logo" id="inicio" href="#"><img src="img/logo.png" alt="Logo" width="70"></a>
+                <a class="menu-logo" href="#"><img src="img/logo.png" alt="Logo" width="70"></a>
                 
                 <nav class="menu-nav">
-                    <a href="#" class="btnMenu btnMenu_open"><i class="fas fa-bars"></i></a>
-                    <ul id="menu" class="menu">
-                        <a href="#" class="btnMenu btnMenu_close"><i class="fas fa-bars"></i></a>
-                        <li><a href="#sobre" id="linkInicio">Início</a></li>
-                        <li><a href="#conhecimentos" id="linkConhecimentos">Conhecimentos</a></li>
-                        <li><a href="#projetos" id="linkProjetos">Projetos</a></li>
-                        <li><a href="#contato" id="linkContato">Contato</a></li>
+                    <button class="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul id="menu" class="menu" role="menu">
+                        <li><a id="linkSobre">Sobre</a></li>
+                        <li><a id="linkConhecimentos">Conhecimentos</a></li>
+                        <li><a id="linkProjetos">Projetos</a></li>
+                        <li><a id="linkContato">Contato</a></li>
                     </ul>
                 </nav>
             </div>  
@@ -254,7 +255,7 @@
 
                 <p style="font-size: 12px; margin-top: 10px;">Ilustrações por <a style="color: white;" href="https://storyset.com/work" target="_blank">Storyset</a></p>
 
-                <a href="#inicio" id="linkArrow"><i class="fas fa-arrow-circle-up"></i></a>
+                <a href="#sobre" id="linkArrow"><i class="fas fa-arrow-circle-up"></i></a>
             </div>
 
         </footer>

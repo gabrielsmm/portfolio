@@ -1,59 +1,142 @@
-.btnMenu{
-    margin: 0px 10px;
-}
-
-.menu_open{
-    display: block !important;
-}
-
-.menu_close{
-    display: none !important;
-}
-
 @media (max-width: 575.98px) { 
-    .menu-bg .menu-container .menu-nav .btnMenu_open{
+    .btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: white;
+    }
+    .menu {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        right: 0px;
+        background: rgba(10, 18, 42, .95);
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .menu a {
+        padding: 1rem;
+        margin: 0px 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    .menu-nav.active .menu {
+        height: 60vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .hamburger {
         display: block;
+        border-top: 2px solid;
+        width: 20px;
     }
-    .menu-bg .menu-container .menu-nav .btnMenu_close{
-        display: none;
+    .hamburger::after, .hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
     }
- }
+    .menu-nav.active .hamburger {
+        border-top-color: transparent;
+    }
+    .menu-nav.active .hamburger::before {
+        transform: rotate(135deg);
+    }
+    .menu-nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-    .menu-bg .menu-container .menu-nav .btnMenu_open{
+    .btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: white;
+    }
+    .menu {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        right: 0px;
+        background: rgba(10, 18, 42, .95);
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .menu a {
+        padding: 1rem;
+        margin: 0px 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    .menu-nav.active .menu {
+        height: 60vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .hamburger {
         display: block;
+        border-top: 2px solid;
+        width: 20px;
     }
-    .menu-bg .menu-container .menu-nav .btnMenu_close{
-        display: none;
+    .hamburger::after, .hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
     }
- }
+    .menu-nav.active .hamburger {
+        border-top-color: transparent;
+    }
+    .menu-nav.active .hamburger::before {
+        transform: rotate(135deg);
+    }
+    .menu-nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    .menu-bg .menu-container .menu-nav .btnMenu_open{
+    .btn-mobile {
         display: none;
     }
-    .menu-bg .menu-container .menu-nav .btnMenu_close{
-        display: none;
-    }
- }
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-    .menu-bg .menu-container .menu-nav .btnMenu_open{
+    .btn-mobile {
         display: none;
     }
-    .menu-bg .menu-container .menu-nav .btnMenu_close{
-        display: none;
-    }
- }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    .menu-bg .menu-container .menu-nav .btnMenu_open{
+    .btn-mobile {
         display: none;
     }
-    .menu-bg .menu-container .menu-nav .btnMenu_close{
-        display: none;
-    }
- }
+}
