@@ -220,9 +220,7 @@
             <h3>Deixe uma mensagem</h3>
 
             <div class="mensagem-container">
-                <form action="https://api.staticforms.xyz/submit" method="post">
-                    <input type="hidden" name="accessKey" value="47fa2a6e-18f1-4992-939b-d55c5c902385">
-                
+                <form onsubmit="handleSubmit(event)">         
                     <label for="inputNome">Digite seu nome:</label>
                     <input name="name" type="text" required maxlength="25" minlength="2">
                 
@@ -231,9 +229,12 @@
                 
                     <label for="mensagem">Mensagem:</label>
                     <textarea name="message" type="text" required maxlength="100"></textarea>
-                
-                    <input type="hidden" name="redirectTo" value="http://portfoliogm.epizy.com">
-                
+                    
+                    <div class="success-msg">
+                        <i class="fa fa-check"></i>
+                        <span>Mensagem enviada com sucesso. Muito obrigado!</span>
+                    </div>
+
                     <button type="submit">Enviar mensagem</button>
                 </form>
             </div>
@@ -259,7 +260,7 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script src="js/scroll.js"></script>
+        <script src="js/main.js"></script>
         <script src="js/btnMenu.js"></script>
     </body>
 </html>

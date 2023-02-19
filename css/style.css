@@ -434,6 +434,17 @@ h3{
     transition: 0.5s;
 }
 
+.success-msg {
+    width: 60%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: #270;
+    background-color: #DFF2BF;
+    display: none;
+}
+
 /* Footer */
 
 .footer-bg{
