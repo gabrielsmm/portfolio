@@ -1,3 +1,26 @@
+:root {
+    --text-color: rgb(243, 243, 243);
+    --bg-color: #0A122A;
+    --bg-link-color: rgb(243, 243, 243);
+    --bg-secondary-color: #0d1736;
+    --stroke-color: rgba(243, 243, 243, 0.5);
+    --surface-color: rgba(243, 243, 243, 0.05);
+    --surface-color-hover: rgba(243, 243, 243, 0.02);
+    --highlight-color: rgba(243, 243, 243, 0.2);
+    --switch-bg-url: url(../img/sun.svg);
+}
+  
+.light:root {
+    --text-color: rgb(10, 18, 42);
+    --bg-color: #f3f3f3;
+    --bg-link-color: transparent;
+    --bg-secondary-color: #e7e6e6;
+    --stroke-color: rgba(10, 18, 42, 0.5);
+    --surface-color: rgba(10, 18, 42, 0.05);
+    --highlight-color: rgba(10, 18, 42, 0.2);
+    --switch-bg-url: url(../img/moon-stars.svg);
+}
+
 body, h1, h2, p, ul, li, a{
     margin: 0px;
     padding: 0px;
@@ -5,7 +28,7 @@ body, h1, h2, p, ul, li, a{
 
 body{
     font-family: "Nunito", Helvetica, Arial, sans-serif;
-    color: #222222;
+    /* color: #222222; */
     overflow-x: hidden;
 }
 
@@ -40,9 +63,13 @@ img{
     box-sizing: border-box; /* respeita o tamanho da box definida */
 }
 
+html {
+    background-color: var(--bg-secondary-color);
+}
+
 /* Menu */
 .menu-bg{
-    background-color: #0A122A;
+    background-color: var(--bg-color);
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -73,7 +100,7 @@ img{
     display: block; /* para influenciar no padding */
     padding: 5px;
     margin-right: 10px;
-    color: white;
+    color: var(--text-color);
     position: relative;
     border-radius: 10px;
     transition: .3s;
@@ -81,8 +108,67 @@ img{
 }
 
 .menu-nav a:hover {
-    color: #0A122A;
-    background-color: white;
+    color: var(--bg-color);
+    background-color: var(--text-color);
+}
+
+/* Switch Mode */
+.switch {
+    position: relative;
+    width: 64px;
+}
+
+.switch button {
+    width: 32px;
+    height: 32px;
+    background: var(--text-color) var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    animation: slide-back 0.2s;
+}
+
+.light .switch button {
+    animation: slide-in 0.2s forwards;
+}
+
+.switch button:hover {
+    outline: 8px solid var(--highlight-color);
+}
+
+.switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+  
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 /* Sobre */
@@ -101,7 +187,7 @@ img{
 }
 
 .sobre-mim h2{
-    color: #0A122A;
+    color: var(--text-color);
     font-size: 3em;
     margin-bottom: 20px;
 }
@@ -113,12 +199,12 @@ img{
 .sobre-mim .eu{
     font-size: 1.15em;
     margin-bottom: 20px;
-    color: #585858;
+    color: var(--text-color);
 }
 
 .sobre-mim .texto{
     margin-bottom: 15px;
-    color: #0A122A;
+    color: var(--text-color);
     text-align: justify;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
@@ -133,6 +219,13 @@ img{
 
 .links a{
     font-size: 50px;
+    background-color: var(--bg-link-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .links a:nth-child(1){
@@ -155,28 +248,9 @@ img{
     transition: 0.5s;
 }
 
-@keyframes flutuacao{
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(15px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
 .sobre-img{
-    flex: 1 1 500px;
+    flex: 1 1 350px;
     margin: 0 10px;
-}
-
-.sobre-img img{
-    animation: flutuacao infinite 5s;
-    width: 400px;
-    margin: 0 auto;
-    border-radius: 50%;
 }
 
 /* Conhecimentos */
@@ -185,13 +259,13 @@ img{
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 0px;
-    border-bottom: 2px solid #0A122A;
-    border-top: 2px solid #0A122A;
+    border-bottom: 2px solid var(--text-color);
+    border-top: 2px solid var(--text-color);
 }
 
 h3{
     text-align: center;
-    color: #0A122A;
+    color: var(--text-color);
     font-size: 2em;
 }
 
@@ -213,13 +287,13 @@ h3{
 
 .conhecimentos .itens .tecnologias>p{
     text-align: start;
-    color: #585858;
+    color: var(--text-color);
     font-size: 1.20em;
     margin: 0 auto 15px 10px;
 }
 
 .conhecimentos .itens .tecnologias .tecnologia p{
-    color: white;
+    color: var(--bg-color);
     margin-left: 15px;
 }
 
@@ -228,7 +302,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0A122A;
+    background-color: var(--text-color);
     border-radius: 20px;
     height: 80px;
     margin: 0px 10px 10px 10px;
@@ -277,7 +351,7 @@ h3{
 .projetos p{
     text-align: center;
     font-size: 1.20em;
-    color: #585858;
+    color: var(--text-color);
 }
 
 .projetos .projetos-container{
@@ -295,7 +369,7 @@ h3{
 }
 
 .projetos .projetos-container .projeto p{
-    color: #0A122A;
+    color: var(--text-color);
     font-weight: bold;
 }
 
@@ -315,7 +389,7 @@ h3{
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 0px;
-    border-top: 2px solid #0A122A;
+    border-top: 2px solid var(--text-color);
 }
 
 .contato .contato-container{
@@ -345,7 +419,7 @@ h3{
 .contato .contato-container .contato-box-container .contato-box span{
     width: 60px;
     height: 60px;
-    background-color: #0A122A;
+    background-color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,11 +431,14 @@ h3{
 
 .contato .contato-container .contato-box-container .contato-box span i{
     font-size: 30px;
-    color: white;
+    color: var(--bg-color);
+}
+
+.contato .contato-container .contato-box-container .contato-box div > p{
+    color: var(--text-color);
 }
 
 .contato .contato-container .contato-box-container .contato-box div > p:first-child{
-    color: #0A122A;
     font-weight: bold;
     font-size: 1.20em;
     margin-bottom: 5px;
@@ -370,8 +447,8 @@ h3{
 /* Mensagem */
 
 .contato .mensagem-container{
-    background-color: #0A122A;
-    color: white;
+    background-color: var(--text-color);
+    color: var(--text-color);
     padding: 15px;
     border-radius: 12px;
     max-width: 800px;
@@ -388,6 +465,7 @@ h3{
     font-size: 1.20em;
     margin-top: 8px;
     margin-bottom: 8px;
+    color: var(--bg-color);
 }
 
 .contato .mensagem-container form input{
@@ -395,6 +473,8 @@ h3{
     height: 40px;
     border-radius: 12px;
     border: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .contato .mensagem-container form textarea{
@@ -404,6 +484,8 @@ h3{
     border-radius: 12px;
     border: none;
     font-family: "Nunito", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .contato .mensagem-container form button{
@@ -412,8 +494,8 @@ h3{
     width: 50%;
     border-radius: 12px;
     border: none;
-    background-color: white;
-    color: #0A122A;
+    background-color: var(--bg-secondary-color);
+    color: var(--text-color);
     font-family: "Nunito", Helvetica, Arial, sans-serif;
     font-size: 1.20em;
     font-weight: bold;
@@ -441,7 +523,7 @@ h3{
 /* Footer */
 
 .footer-bg{
-    background-color: #0A122A;
+    background-color: var(--bg-color);
 }
 
 .footer-bg .container-footer{
@@ -452,8 +534,12 @@ h3{
 
 .footer-bg .container-footer p{
     text-align: center;
-    color: white;
+    color: var(--text-color);
     font-size: 1.20em;
+}
+
+.footer-bg .container-footer a{
+    color: var(--text-color);
 }
 
 .footer-bg .container-footer .links-footer{
@@ -465,7 +551,7 @@ h3{
 }
 
 .footer-bg .container-footer .links-footer a{
-    background-color: white;
+    background-color: var(--bg-link-color);
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -504,7 +590,7 @@ h3{
 
 #linkArrow i{
     font-size: 45px;
-    color: white;
+    color: var(--text-color);
 }
 
 /* Ajustes */

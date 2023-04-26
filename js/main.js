@@ -47,3 +47,14 @@ async function handleSubmit(event) {
         console.error('Error:', error);
     });
 }
+
+// Switch Mode
+function toggleMode() {
+    const html = document.documentElement;
+    html.classList.toggle("light");
+    if (html.classList.contains("light")) {
+        document.querySelector('.logo').src = "img/logo_dark.png";
+    } else {
+        document.querySelector('.logo').src = "img/logo.png";
+    }
+}

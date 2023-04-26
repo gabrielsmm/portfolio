@@ -14,7 +14,7 @@
     <body>
         <header class="menu-bg">
             <div class="menu-container">
-                <a class="menu-logo" href="#"><img src="img/logo.png" alt="Logo" width="70"></a>
+                <a class="menu-logo" href="#"><img class="logo" src="img/logo.png" alt="Logo" width="70"></a>
                 
                 <nav class="menu-nav">
                     <button class="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
@@ -27,6 +27,11 @@
                         <li><a id="linkContato">Contato</a></li>
                     </ul>
                 </nav>
+
+                <div class="switch" onclick="toggleMode()">
+                    <button></button>
+                    <span></span>
+                </div>
             </div>  
         </header>
 
@@ -34,7 +39,7 @@
             <div class="sobre-mim">
                 <h2>Gabriel Mendes</h2>
                 <div id="typed-strings">
-                    <p>Desenvolvedor Full Stack Angular | Java em aprendizado constante</p>
+                    <p>Desenvolvedor Angular | Java</p>
                 </div>
                 <p id="typed" class="eu"></p>
                 <p class="texto">Estou sempre procurando novos desafios profissionais, desenvolvimento de minhas 
@@ -48,7 +53,7 @@
             </div>
 
             <div class="sobre-img">
-                <img src="img/perfil.jpg" alt="Imagem de perfil">
+                <img src="img/programming-animation.svg" alt="Ilustração">
             </div>
         </section>
 
@@ -158,21 +163,21 @@
                 </div>
 
                 <div class="projeto">
-                    <a href="#" target="_blank">
+                    <a href="http://portfoliogm.epizy.com/Finans/index.html" target="_blank">
                         <p>Finans</p>
                         <img src="img/projeto-finans.png" alt="Projeto Finans">
                     </a>
                 </div>
 
                 <div class="projeto">
-                    <a href="#" target="_blank">
+                    <a href="http://portfoliogm.epizy.com/TecBlog/index.html" target="_blank">
                         <p>TecBlog</p>
                         <img src="img/projeto-tecblog.png" alt="Projeto TecBlog">
                     </a>
                 </div>
 
                 <div class="projeto">
-                    <a href="#" target="_blank">
+                    <a href="http://portfoliogm.epizy.com/NoticiasCidade/index.html" target="_blank">
                         <p>Notícias Cidade</p>
                         <img src="img/projeto-noticias-cidade.png" alt="Projeto Notícias Cidade">
                     </a>
@@ -223,13 +228,13 @@
             <div class="mensagem-container">
                 <form onsubmit="handleSubmit(event)">         
                     <label for="inputNome">Digite seu nome:</label>
-                    <input name="name" type="text" required maxlength="25" minlength="2">
+                    <input name="name" type="text" placeholder="Seu nome" required maxlength="25" minlength="2">
                 
                     <label for="inputEmail">Digite seu E-mail:</label>
-                    <input name="email" type="email" required maxlength="50">
+                    <input name="email" type="email" placeholder="Seu e-mail" required maxlength="50">
                 
                     <label for="mensagem">Mensagem:</label>
-                    <textarea name="message" type="text" required maxlength="100"></textarea>
+                    <textarea name="message" type="text" placeholder="Uma mensagem agradável..." required maxlength="100"></textarea>
                     
                     <div class="success-msg">
                         <i class="fa fa-check"></i>
@@ -251,9 +256,9 @@
                     <a href="https://instagram.com/gabrielsmm_" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
 
-                <p>Desenvolvido por <a style="color: white;" href="https://github.com/gabrielsmm" target="_blank">Gabriel Mendes</a></p>
+                <p>Desenvolvido por <a href="https://github.com/gabrielsmm" target="_blank">Gabriel Mendes</a></p>
 
-                <p style="font-size: 12px; margin-top: 10px;">Ilustrações por <a style="color: white;" href="https://storyset.com/work" target="_blank">Storyset</a></p>
+                <p style="font-size: 12px; margin-top: 10px;">Ilustrações por <a href="https://storyset.com/work" target="_blank">Storyset</a></p>
 
                 <a href="#sobre" id="linkArrow"><i class="fas fa-arrow-circle-up"></i></a>
             </div>
