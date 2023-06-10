@@ -440,6 +440,11 @@ h3{
 
 .experiencia-titulo {
     font-weight: bold;
+    padding: 5px;
+}
+
+.experiencia-data {
+    padding: 5px;
 }
 
 .experiencia-empresa {
@@ -660,6 +665,16 @@ h3{
 }
 
 /* Ajustes */
+@media (max-width: 385.00px) {
+    .experiencia-ativa {
+        border-left: transparent;
+        border-bottom: 5px solid var(--text-color);
+    }
+    .experiencias-opcoes {
+        width: 100%;
+        flex-direction: row;
+    }
+}
 
 @media (max-width: 320.98px) {
     .menu-nav .menu{
@@ -685,6 +700,9 @@ h3{
     }
     .sobre .sobre-img {
         display: none;
+    }
+    .experiencia {
+        padding: 5px;
     }
 }
 
@@ -716,6 +734,9 @@ h3{
     }
     .sobre .sobre-img {
         display: none;
+    }
+    .experiencia {
+        padding: 15px;
     }
  }
 
