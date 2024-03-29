@@ -1,7 +1,6 @@
 :root {
     --text-color: rgb(243, 243, 243);
     --bg-color: #0A122A;
-    --bg-link-color: rgb(243, 243, 243);
     --bg-secondary-color: #0d1736;
     --stroke-color: rgba(243, 243, 243, 0.5);
     --surface-color: rgba(243, 243, 243, 0.05);
@@ -9,18 +8,31 @@
     --highlight-color: rgba(243, 243, 243, 0.2);
     --bg-menu-color: rgba(10, 18, 42, .95);
     --switch-bg-url: url(../img/moon-stars.svg);
+
+    /* Estilo dos links sociais */
+    --bg-link-color: rgb(243, 243, 243);
+
+    /* Estilo dos demais botões */
+    --button-color: #0A122A;
+    --bg-button-color: rgb(243, 243, 243);
 }
   
 .light:root {
     --text-color: rgb(10, 18, 42);
     --bg-color: #f3f3f3;
-    --bg-link-color: transparent;
     --bg-secondary-color: #e7e6e6;
     --stroke-color: rgba(10, 18, 42, 0.5);
     --surface-color: rgba(10, 18, 42, 0.05);
     --highlight-color: rgba(10, 18, 42, 0.2);
     --bg-menu-color: rgb(243, 243, 243, .95);
     --switch-bg-url: url(../img/sun.svg);
+
+    /* Estilo dos links sociais */
+    --bg-link-color: transparent;
+
+    /* Estilo dos demais botões */
+    --button-color: #f3f3f3;
+    --bg-button-color: rgb(10, 18, 42);
 }
 
 body, h1, h2, p, ul, li, a{
@@ -110,8 +122,8 @@ html {
 }
 
 .menu-nav a:hover {
-    color: var(--bg-color);
-    background-color: var(--text-color);
+    color: var(--button-color);
+    background-color: var(--bg-button-color);
 }
 
 /* Switch Mode */
@@ -123,7 +135,7 @@ html {
 .switch button {
     width: 32px;
     height: 32px;
-    background: var(--text-color) var(--switch-bg-url) no-repeat center;
+    background: var(--bg-button-color) var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
 
@@ -214,7 +226,6 @@ html {
 }
 
 .links{
-    max-width: 350px;
     display: flex;
     justify-content: space-between;
 }
@@ -245,7 +256,22 @@ html {
     transition: 0.5s;
 }
 
-.links a:nth-child(1):hover, .links a:nth-child(2):hover, .links a:nth-child(3):hover{
+/* Download currículo */
+.links a:nth-child(4){ 
+    color: var(--button-color);
+    background-color: var(--bg-button-color);
+    font-size: 20px;
+    width: auto;
+    border-radius: 60px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.links a:nth-child(4) i{
+    margin-right: 7px;
+}
+
+.links a:nth-child(1):hover, .links a:nth-child(2):hover, .links a:nth-child(3):hover, .links a:nth-child(4):hover{
     transform: translate(0, -10px);
     transition: 0.5s;
 }
@@ -295,7 +321,7 @@ h3{
 }
 
 .conhecimentos .itens .tecnologias .tecnologia p{
-    color: var(--bg-color);
+    color: var(--button-color);
     margin-left: 15px;
 }
 
@@ -304,7 +330,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--text-color);
+    background-color: var(--bg-button-color);
     border-radius: 20px;
     height: 80px;
     margin: 0px 10px 10px 10px;
@@ -490,7 +516,7 @@ h3{
 .contato .contato-container .contato-box-container .contato-box span{
     width: 60px;
     height: 60px;
-    background-color: var(--text-color);
+    background-color: var(--bg-button-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -502,7 +528,7 @@ h3{
 
 .contato .contato-container .contato-box-container .contato-box span i{
     font-size: 30px;
-    color: var(--bg-color);
+    color: var(--button-color);
 }
 
 .contato .contato-container .contato-box-container .contato-box div > p{
@@ -692,6 +718,16 @@ h3{
     .links{
         margin: 0 auto;
     }
+    .links a{
+        height: 35px;
+    }
+    .links a:nth-child(1), .links a:nth-child(2), .links a:nth-child(3){
+        font-size: 28px;
+        width: 35px;
+    }
+    .links a:nth-child(4){
+        font-size: 14px;
+    }
     .conhecimentos .itens .img-exp{
         display: none;
     }
@@ -722,6 +758,16 @@ h3{
     }
     .links{
         margin: 0 auto;
+    }
+    .links a{
+        height: 40px;
+    }
+    .links a:nth-child(1), .links a:nth-child(2), .links a:nth-child(3){
+        font-size: 32px;
+        width: 40px;
+    }
+    .links a:nth-child(4){
+        font-size: 16px;
     }
     .conhecimentos .itens .img-exp{
         display: none;
