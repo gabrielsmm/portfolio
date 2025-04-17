@@ -61,14 +61,57 @@ function toggleMode() {
 }
 
 // Mudança das experiências
+function mudarExperiencia(nomeExperiencia, textoTitulo, textoData, textoEmpresa, textoDescricao) {
+    // Seleciona os elementos que serão atualizados
+    const varTitulo = document.querySelector(".experiencia-titulo");
+    const varData = document.querySelector(".experiencia-data");
+    const varEmpresa = document.querySelector(".experiencia-empresa");
+    const varDescricao = document.querySelector(".experiencia-descricao");
+
+    // Verifica se os elementos existem antes de manipulá-los
+    if (!varTitulo || !varData || !varEmpresa || !varDescricao) {
+        console.error("Elementos de experiência não encontrados.");
+        return;
+    }
+
+    // Função para atualizar os elementos com os novos valores
+    const atualizarExperiencia = () => {
+        varTitulo.innerHTML = textoTitulo;
+        varData.innerHTML = textoData;
+        varEmpresa.innerHTML = textoEmpresa;
+        varDescricao.innerHTML = textoDescricao;
+    };
+
+    // Atualiza os valores ao carregar a página, se for a experiência inicial
+    if (nomeExperiencia === ".caixa" && !varTitulo.innerHTML) {
+        atualizarExperiencia();
+    }
+
+    // Adiciona o evento de clique para atualizar os valores
+    const elemento = document.querySelector(nomeExperiencia);
+    if (elemento) {
+        elemento.addEventListener("click", atualizarExperiencia);
+    } else {
+        console.error(`Elemento com o seletor "${nomeExperiencia}" não encontrado.`);
+    }
+}
+
+mudarExperiencia(".caixa",
+"Desenvolvedor Full Stack",
+"Jan 2025 - Atualmente",
+"Caixa Econômica Federal",
+"Atualmente atuo como desenvolvedor na Caixa Econômica Federal, sendo responsável pelo desenvolvimento e manutenção de sistemas internos. " +
+"Minhas atividades envolvem o uso de Java, AngularJS e banco de dados Oracle, além de ferramentas de ETL e automação de processos."
+);
+
 mudarExperiencia(".setfocus",
 "Estagiário - Programador Júnior",
-"Jul 2021 - Atualmente",
+"Jul 2021 - Dez 2024 (3 anos e 6 meses)",
 "7Focus Sistemas",
-"Após concluir meu estágio em dezembro de 2022, assumi o cargo de programador júnior, onde sou responsável " + 
-"pelo desenvolvimento e manutenção de um sistema de gestão pública. Minhas habilidades abrangem o uso de " + 
-"Angular no frontend e Java com Spring no backend, além da elaboração de relatórios Jasper e " + 
-"integrações com API's de terceiros.");
+"Após concluir meu estágio em dezembro de 2022, fui efetivado como programador júnior, assumindo responsabilidades " + 
+"no desenvolvimento e manutenção de um sistema de gestão pública. Durante essa experiência, foram aplicadas habilidades " + 
+"como o uso de Angular no frontend e Java com Spring no backend, além do desenvolvimento de relatórios Jasper e " + 
+"integração com APIs de terceiros.");
 
 mudarExperiencia(".newline",
 "Estagiário de T.I.",
@@ -76,26 +119,6 @@ mudarExperiencia(".newline",
 "Newline Sistemas de Segurança",
 "Atuei como estagiário de Tecnologia da Informação, desempenhando atividades de acompanhamento de demandas e chamados relacionados ao Departamento de T.I.");
 
-function mudarExperiencia(
-    nomeExperiencia,
-    textoTitulo,
-    textoData,
-    textoEmpresa,
-    textoDescricao
-) {
-    const varTitulo = document.querySelector(".experiencia-titulo");
-    const varData = document.querySelector(".experiencia-data");
-    const varEmpresa = document.querySelector(".experiencia-empresa");
-    const varDescricao = document.querySelector(".experiencia-descricao");
-
-    document.querySelector(nomeExperiencia).addEventListener("click", () => {
-        varTitulo.innerHTML = textoTitulo;
-        varData.innerHTML = textoData;
-        varEmpresa.innerHTML = textoEmpresa;
-        varDescricao.innerHTML = textoDescricao;
-    });
-}
-  
 const opcoes = document.getElementById("experiencias-opcoes");
 const botoes = opcoes.getElementsByClassName("experiencia");
 
