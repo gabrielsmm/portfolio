@@ -606,15 +606,23 @@ h3{
     transition: 0.5s;
 }
 
-.success-msg {
+.form-msg {
     width: 60%;
     margin: 15px auto;
     padding: 10px;
     border-radius: 3px;
     text-align: center;
+    display: none;
+}
+
+.success-msg {
     color: #270;
     background-color: #DFF2BF;
-    display: none;
+}
+
+.error-msg {
+    color: #D8000C;
+    background-color: #FFBABA;
 }
 
 /* Footer */

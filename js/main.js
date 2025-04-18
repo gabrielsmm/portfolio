@@ -23,30 +23,60 @@ async function handleSubmit(event) {
     const formData = new FormData(event.target);
     formData.append('accessKey', '47fa2a6e-18f1-4992-939b-d55c5c902385');
 
-    await fetch('https://api.staticforms.xyz/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Object.fromEntries(formData)),
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        if (data.success) {
-            event.target.reset();
-            
-            event.target[3].style.display = "none";
-            document.querySelector('.success-msg').style.display = "block";
+    try {
+        const response = await fetch('https://api.staticforms.xyz/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(Object.fromEntries(formData))
+        });
 
-            setTimeout(() => {
-                document.querySelector('.success-msg').style.display = "none";
-                event.target[3].style.display = "block";
-            }, 3500);
+        if (response.ok) {
+            event.target.reset();
+
+            exibirMensagemEnvioFormulario('Mensagem enviada com sucesso. Muito obrigado!');
+        } else {
+            console.error(`Erro: ${response.status} - ${response.statusText}`);
+
+            exibirMensagemEnvioFormulario('Erro ao enviar a mensagem. Tente novamente mais tarde.');
         }
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+    } catch (error) {
+        console.error('Erro ao enviar o formulário:', error);
+    }
+}
+
+function exibirMensagemEnvioFormulario(mensagem) {
+    const botaoEnvio = document.getElementById("botao-envio");
+    const containerMensagem = document.querySelector('.form-msg');
+    const icone = containerMensagem?.querySelector('i');
+    const campoMensagem = containerMensagem?.querySelector('span');
+
+    if (!botaoEnvio || !containerMensagem || !icone || !campoMensagem) {
+        console.error("Elementos necessários para exibir a mensagem não foram encontrados.");
+        return;
+    }
+
+    // Determina as classes com base na mensagem
+    const isSucesso = mensagem.includes('sucesso');
+    const classe = isSucesso ? 'success-msg' : 'error-msg';
+    const classeIcone = isSucesso ? 'fa-check' : 'fa-exclamation-triangle';
+
+    // Atualiza o estado dos elementos
+    botaoEnvio.style.display = "none";
+    containerMensagem.classList.add(classe);
+    containerMensagem.style.display = "block";
+    icone.classList.add(classeIcone);
+    campoMensagem.textContent = mensagem;
+
+    // Remove as classes e restaura o estado após 3.5 segundos
+    setTimeout(() => {
+        botaoEnvio.style.display = "block";
+        containerMensagem.classList.remove(classe);
+        containerMensagem.style.display = "none";
+        icone.classList.remove(classeIcone);
+        campoMensagem.textContent = "";
+    }, 3500);
 }
 
 // Mudar modo (dark ou light)
